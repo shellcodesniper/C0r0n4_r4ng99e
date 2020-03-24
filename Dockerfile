@@ -24,7 +24,10 @@ COPY package.json yarn.lock ./
 RUN cat package.json
 
 RUN npm install npm@latest -g
-RUN npm install
+
+RUN npm install yarn -g
+
+RUN yarn install --production
 
 COPY Gemfile Gemfile.lock ./
 
