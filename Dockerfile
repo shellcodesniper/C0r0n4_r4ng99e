@@ -32,7 +32,7 @@ RUN bundle install --without development test
 
 COPY . .
 
-RUN rails assets:precompile
+RUN bundle exec rails assets:precompile
 
 EXPOSE 80
 
