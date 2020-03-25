@@ -1,34 +1,40 @@
-<ul class="navbar-nav bg-primary sidebar pt-3 px-2">
+<ul id="sidebarToggled" class="navbar-nav bg-primary sidebar">
         <li class="nav-item">
-            <a class="nav-link text-white" href="#">Link 1</a>
+            <h2 class="navbar-brand mb-0"><i class="fa fa-line-chart"></i> 현황</h2>
         </li>
         <li class="nav-item">
-            <a class="nav-link text-white" href="#">Link 2</a>
+            <a class="nav-link text-white" href="#infectedStatus">확진자 현황</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link text-white" href="#">Link 3</a>
-        </li>
-        <hr class="divider">
-        <li class="nav-item">
-            <a class="nav-link text-white" href="#">Link 1</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link text-white" href="#">Link 2</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link text-white" href="#">Link 3</a>
+            <a class="nav-link text-white" href="#gwangjuStatus">광주 현황</a>
         </li>
         <hr class="divider">
         <li class="nav-item">
-            <a class="nav-link text-white" href="#">Link 2</a>
+            <h2 class="navbar-brand mb-0"><i class="fa fa-flag"></i> 광주</h2>
         </li>
-        <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="#">1</a>
-                <a class="dropdown-item" href="#">2</a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#">3</a>
+        <li class="nav-item">
+            <a class="nav-link text-white" href="#gwangjuPolicy">정책 정보</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link text-white" href="#quarantineStatus">방역 상황</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link text-white" href="#gwangjuPolicy">마스크 판매처</a>
+        </li>
+        <hr class="divider">
+        <li class="nav-item">
+            <a class="nav-link text-white" href="">Link 2</a>
+        </li>
+        <li class="nav-item">
+            <div id="accordion">
+                <a class="nav-link text-white pointer" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">기부 <i class="fa fa-angle-down"></i></a>
+                <div id="collapseOne" class="collapse bg-white rounded" aria-labelledby="headingOne" data-parent="#accordion">
+                    <a class="nav-link text-dark" href="">네이버</a>
+                    <a class="nav-link text-dark" href="">&rdca; 기부현황</a>
+                    <div class="collapse-divider"></div>
+                    <a class="nav-link text-dark" href="">카카오</a>
+                    <a class="nav-link text-dark" href="">&rdca; 기부현황</a>
+                </div>
             </div>
         </li>
     </ul>

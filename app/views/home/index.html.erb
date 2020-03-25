@@ -6,18 +6,26 @@
     <%= render 'shared/sidebar' %>
     <!-- Main Content -->
     <div class="container-wrap">
-        <div class="content">
+        <div id="contentToggled" class="content">
             <div class="container-fluid">
+                <!-- infected Status -->
+                <div class="location" id="infectedStatus"></div>
                 <div class="row">
                     <div class="col-xl-4 col-lg-12">
                         <div class="card shadow mb-4">
                             <div class="card-header">
-                                <h6>현황</h6>
+                                <h6 class="text-danger">현황</h6>
                             </div>
                             <div class="card-body text-center">
-                                <h6>광주확진자</h6>
-                                <div class="card-text">
-                                    <span>17</span>명
+                                <div class="my-3">
+                                    <div class="card-text mb-4">
+                                        <h6 class="mb-2 small">국내확진자</h6>
+                                        <div class="h3"><span>9,137</span>명</div>
+                                    </div>
+                                    <div class="card-text">
+                                        <h6 class="mb-2 small">세계확진자</h6>
+                                        <div class="h3"><span>335,955</span>명</div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -25,60 +33,133 @@
                     <div class="col-xl-4 col-lg-12">
                         <div class="card shadow mb-4">
                             <div class="card-header">
-                                <h6>현황</h6>
+                                <h6 class="text-danger">상세현황</h6>
                             </div>
                             <div class="card-body text-center">
-                                <h6>광주확진자</h6>
-                                <div class="card-text"></div>
+                                <div class="my-4">
+                                    <div class="card-text mb-4">
+                                        <h6>
+                                            <div class="row">
+                                                <div class="col-sm-2 text-left">국내현황</div>
+                                                <div class="col-sm-10 small text-right">
+                                                    (확진자: <span class="text-warning">9,137</span> / 격리자 <span class="text-danger">5,281</span> / 완치자 <span class="text-success">3,730</span> / 사망자 <span class="text-dark">126</span>)
+                                                </div>
+                                            </div>
+                                        </h6>
+                                        <div class="progress mt-3">
+                                            <div class="progress-bar bg-danger" role="progressbar" style="width: 62%" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
+                                            <div class="progress-bar bg-success" role="progressbar" style="width: 37%" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
+                                            <div class="progress-bar bg-dark" role="progressbar" style="width: 2%" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
+                                        </div>
+                                    </div>
+                                    <div class="card-text">
+                                        <h6>
+                                            <div class="row">
+                                                <div class="col-sm-2 text-left">세계현황</div>
+                                                <div class="col-sm-10 small text-right">
+                                                    (확진자: <span class="text-warning">335,991</span> / 격리자 <span class="text-danger">223,619</span> / 완치자 <span class="text-success">97,740</span> / 사망자 <span class="text-dark">14,632</span>)
+                                                </div>
+                                            </div>
+                                        </h6>
+                                        <div class="progress mt-2">
+                                            <div class="progress-bar bg-danger" role="progressbar" style="width: 66%" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
+                                            <div class="progress-bar bg-success" role="progressbar" style="width: 27%" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
+                                            <div class="progress-bar bg-dark" role="progressbar" style="width: 7%" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
+                                        </div>
+                                    </div>
+                              </div>
                             </div>
                         </div>
                     </div>
                     <div class="col-xl-4 col-lg-12">
                         <div class="card shadow mb-4">
                             <div class="card-header">
-                                <h6>현황</h6>
+                                <h6 class="text-danger">광주현황</h6>
                             </div>
                             <div class="card-body text-center">
-                                <h6>광주확진자</h6>
+                                <div class="row mt-6 mb-4">
+                                    <div class="col-sm-4">
+                                        <div class="card-text mb-4">
+                                            <h6 class="small mb-2">확진자</h6>
+                                            <div class="h3"><span>19</span>명</div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <div class="card-text mb-4">
+                                            <h6 class="small mb-2">완치자</h6>
+                                            <div class="h3"><span>0</span>명</div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <div class="card-text">
+                                            <h6 class="small mb-2">사망자</h6>
+                                            <div class="h3"><span>0</span>명</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Gwangju Map -->
+                <div class="location" id="gwangjuStatus"></div>
+                <div class="row">
+                    <div class="col-xl-6 col-lg-12">
+                        <div class="card shadow mb-4">
+                            <div class="card-header">
+                                <h6 class="text-danger">한국 확진자 수 증가추이</h6>
+                            </div>
+                            <div class="card-body text-center">
+                                <h6>광주 확진자 그래프가 들어갈곳</h6>
+                                <div class="card-text"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-6 col-lg-12">
+                        <div class="card shadow mb-4">
+                            <div class="card-header">
+                                <h6 class="text-danger">국내 현황</h6>
+                            </div>
+                            <div class="card-body text-center">
+                                <h6>광주 확진자 지도가 들어갈곳</h6>
                                 <div class="card-text"></div>
                             </div>
                         </div>
                     </div>
                 </div>
+                <!-- Gwangju Policy -->
+                <div class="location" id="gwangjuPolicy"></div>
                 <div class="row">
-                    <div class="col-xl-6 col-lg-12">
+                    <div class="col-xl-4 col-lg-12">
                         <div class="card shadow mb-4">
-                            <div class="card-header">
-                                <h6>현황</h6>
+                            <div class="card-header d-flex d-flex-row-align-items-center justify-content-between">
+                                <h6 class="text-danger">긴급 지원사업<a class="text-danger text-decoration-none support_link" href="#support_links">(클릭하면 링크가 있는 곳으로 이동합니다.)</a></h6>
                             </div>
                             <div class="card-body text-center">
-                                <h6>광주확진자</h6>
-                                <div class="card-text"></div>
+                                <div class="card-text">
+                                    <div class="container">
+                                        <%= image_tag 'policy-1.jpg' %>
+                                        <%= image_tag 'policy-2.jpg' %>
+                                        <%= image_tag 'policy-3.jpg' %>
+                                    </div>
+                                    <div class="container mt-3" id="support_links">
+                                        <a class="btn btn-primary btn-block active" href="https://blog.naver.com/dodreamgj/221868427852" target="_blank" alt="새창으로 이동">긴급생계자금 지원사업</a>
+                                        <a class="btn btn-primary btn-block active" href="https://www.gwangju.go.kr/contentsView.do?pageId=www453" target="_blank" alt="새창으로 이동">광주광역시 복지 지원사업</a>
+                                        <a class="btn btn-primary btn-block active" href="http://www.bizinfo.go.kr/see/seea/selectSEEA140Detail.do?menuId=80001001001&pblancId=PBLN_000000000051543" target="_blank" alt="새창으로 이동">광주광역시 소상공인 지원사업</a>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-xl-6 col-lg-12">
-                        <div class="card shadow mb-4">
-                            <div class="card-header">
-                                <h6>현황</h6>
-                            </div>
-                            <div class="card-body text-center">
-                                <h6>광주확진자</h6>
-                                <div class="card-text"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
                     <div class="col-xl-8 col-lg-12">
                         <div class="row">
                             <div class="col-xl-12 col-lg-12">
                                 <div class="card shadow mb-4">
                                     <div class="card-header">
-                                        <h6>현황</h6>
+                                        <h6 class="text-danger">마스크 판매처</h6>
                                     </div>
                                     <div class="card-body text-center">
-                                        <h6>광주확진자</h6>
+                                        <h6>마스크판매처 조회가 들어갈곳</h6>
                                         <div class="card-text"></div>
                                     </div>
                                 </div>
@@ -86,28 +167,80 @@
                             <div class="col-xl-12 col-lg-12">
                                 <div class="card shadow mb-4">
                                     <div class="card-header">
-                                        <h6>현황</h6>
+                                        <h6 class="text-danger">마스크 5부제</h6>
                                     </div>
                                     <div class="card-body text-center">
-                                        <h6>광주확진자</h6>
-                                        <div class="card-text"></div>
+                                        <div class="card-text">
+                                            <div class="row px-4 py-3">
+                                                <div class="col-xl-6 col-lg-12">
+                                                    <table class="table table-striped">
+                                                        <thead>
+                                                            <tr>
+                                                                <th scope="col">출생연도 끝자리</th>
+                                                                <th scope="col">요일</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <th scope="row">1, 6</th>
+                                                                <td>월요일</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th scope="row">2, 7</th>
+                                                                <td>화요일</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th scope="row">3, 8</th>
+                                                                <td>수요일</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th scope="row">4, 9</th>
+                                                                <td>목요일</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th scope="row">5, 0</th>
+                                                                <td>금요일</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th scope="row">
+                                                                    <div class="container px-5">출생년도 관계없이 평일에 구입하지 못한 사람 구매</div>
+                                                                </th>
+                                                                <td>주말(토, 일)</td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                                <div class="col-xl-6 col-lg-12">
+                                                    <div class="col-sm-12 mb-5">
+                                                        <div class="container-fluid text-left">
+                                                            <h3 class="container text-bold text-left">마스크 직접 구매</h3>
+                                                        </div>
+                                                        <div class="container-fluid text-left">
+                                                            <div class="container">운전면허증, 주민등록증, 여권 등의 신분증을 지참</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-12">
+                                                        <div class="container-fluid text-left">
+                                                            <h3 class="container text-bold text-left">마스크 대리 구매</h3>
+                                                        </div>
+                                                        <div class="container-fluid text-left">
+                                                            <div class="container">주민등록등본상 동거인이 5부제 해당 요일에 대리 구매 가능</div>
+                                                            <div class="container">본인 신분증과 대상자가 병기된 주민등록등본 지참</div>
+                                                            <div class="container">대상 : 2010년 이후 출생한 어린이, 1940년 이전 출생한 80살 이상 노인, 장기요양급여 수급자, 장애인 등</div>
+                                                            <div class="container">구입처 : 약국(3월 9일부터) / 우체국, 농협, 하나로마트(3월 16일부터)</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-xl-4 col-lg-12">
-                        <div class="card shadow mb-4">
-                            <div class="card-header">
-                                <h6>현황</h6>
-                            </div>
-                            <div class="card-body text-center">
-                                <h6>광주확진자</h6>
-                                <div class="card-text"></div>
-                            </div>
-                        </div>
-                    </div>
                 </div>
+                <!-- Quarantine Status -->
+                <div class="location" id="quarantineStatus"></div>
                 <div class="row">
                     <div class="col-xl-4 col-lg-12">
                         <div class="card shadow mb-4">
