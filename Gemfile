@@ -56,3 +56,9 @@ gem 'jquery-rails'
 gem 'sassc-rails', '~> 2.1', '>= 2.1.2'
 gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.5'
 gem 'bootstrap', '~> 4.4.1'
+
+
+
+gem 'unicorn'
+gem 'unicorn-rails'
+# Server
