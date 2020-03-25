@@ -57,7 +57,7 @@ RUN nginx -t
 RUN service nginx restart
 
 
-CMD ["bundle", "exec", "unicorn_rails", "-E", "production", "-c", "./config/unicorn.rb", "-D"]
+CMD ["bundle", "exec", "unicorn_rails", "-E", "production", "-c", "./config/unicorn.rb", "-d"]
 
 # CMD ["bundle", "exec", "unicorn_rails", "-c", "./config/unicorn.rb", "-D"]
 # ! Daemonize
