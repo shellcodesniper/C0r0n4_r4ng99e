@@ -1,3 +1,73 @@
 // Place all the styles related to the home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+
+.wrapper {
+    display: flex;
+}
+
+/* Side Bar */
+h6 {
+    font-size: 1rem;
+    margin: 0; }
+
+.container-fluid {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem; }
+
+.sidebar {
+    position: fixed;
+    min-height: 100vh; 
+    top: 50px;
+    left: 0;
+    z-index: 1;
+    box-shadow: inset -1px 0 0 rgba(0, 0, 0, 0.1); }
+
+.navbar-nav .nav-link { padding: 0.5rem 1rem; }
+
+.divider {
+    margin: 1rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.5); }
+
+.dropdown-menu { 
+    font-size: 0.875rem;
+    min-width: 13rem; }
+
+.container-wrap {
+    margin-top: 50px;
+    width: 100%; }
+
+.content {
+    position: relative;
+    padding-top: 25px;
+    padding-left: 14rem; }
+
+/* Footer */
+footer {
+    z-index: 10;
+}
+
+@media screen and (max-width: 768px) {
+    .sidebar {
+        li {
+            text-align: center;
+            a {
+                font-size: 0.65rem;
+            }
+        }    
+    }
+
+    .dropdown-menu {
+        min-width: 6rem;
+    }
+
+    .content { padding-left: 7rem; }
+}
+
+@media screen and (max-width: 500px) {
+   
+}
+
+@media screen and (min-width: 768px) {
+    .sidebar { width: 14rem; }
+}
